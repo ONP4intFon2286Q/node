@@ -26,3 +26,8 @@ var httpsServer = https.createServer(httpsServerOptions, function (req, res) {
 httpsServer.listen(config.httpsPort, function () {
   console.log("The server is listening on port " + config.httpsPort);
 });
+
+var router = {
+  ping: handlers.ping,
+  users: handlers.users,
+};
